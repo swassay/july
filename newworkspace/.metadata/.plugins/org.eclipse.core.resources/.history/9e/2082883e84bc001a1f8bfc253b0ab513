@@ -1,0 +1,36 @@
+package Page;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.Select;
+
+public class LoginPageClass {
+	WebDriver driver;
+
+	public LoginPageClass() {
+
+	}
+	WebElement lnk_Hm = driver.findElement(By.linkText("Set SkyBlue Background"));
+	WebElement td_Home = driver.findElement(By.xpath("/html/body/div[4]/span/button[1]"));
+
+//	String bgColor = lnk_Hm.getCssValue("background-color");
+//	Syso
+//	mouseOver.perform()
+	
+ 
+	 public void colorchange() {
+		 td_Home.click();
+	}
+	
+
+	public String getPageTitle() {
+
+		return driver.getTitle();
+	}
+
+}

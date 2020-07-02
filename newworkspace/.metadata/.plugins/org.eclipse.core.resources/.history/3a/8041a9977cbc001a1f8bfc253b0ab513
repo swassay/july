@@ -1,0 +1,8 @@
+Feature: Log in tecfios test site and check background colrs
+Scenario:user should log in to site and 
+			click blue or white the background should change
+			
+			Given user goes to site
+			When user clicks blue
+			Then background changes to blue
+			When user clicks white background changes to white

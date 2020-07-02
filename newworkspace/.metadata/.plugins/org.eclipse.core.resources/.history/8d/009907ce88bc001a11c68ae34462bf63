@@ -1,0 +1,42 @@
+package step;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import util.BrowserFactory;
+import page.LoginPageClass;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+public class stepdefinition {
+WebDriver driver=BrowserFactory.startBrowser();
+@Given("^the user is in page$")
+public void the_user_is_in_page() throws Throwable {
+  System.out.println("First");
+	
+	// Write code here that turns the phrase above into concrete actions
+}
+
+@When("^user clicks blue$")
+public void user_clicks_blue() throws Throwable {
+   System.out.println("Second"); 
+  LoginPageClass loginPage=PageFactory.initElements(driver, LoginPageClass.class);
+   loginPage.colorchange();
+  Thread.sleep(3000);
+	// Write code here that turns the phrase above into concrete actions
+}
+
+@Then("^background changes to blue$")
+public void background_changes_to_blue() throws Throwable {
+   System.out.println("Last");
+	// Write code here that turns the phrase above into concrete actions
+driver.close();
+driver.quit();
+}
+
+
+@When("^user clicks white background changes to white$")
+public void user_clicks_white_background_changes_to_white() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+}
+}

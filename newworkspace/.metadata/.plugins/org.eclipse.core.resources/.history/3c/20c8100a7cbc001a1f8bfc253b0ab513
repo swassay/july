@@ -1,0 +1,5 @@
+Feature: Log in techfios website
+Scenario: valid user should log in
+Given a valid user
+Then login displayed
+Then close site
